@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2B164511F3AE0E8F580B0E2E /* Pods_social_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CD74D4766A14365A1BAF50 /* Pods_social_app.framework */; };
+		842D6D131FC72C550088091E /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D6D121FC72C550088091E /* AuthVC.swift */; };
+		842D6D151FC72CF30088091E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D6D141FC72CF30088091E /* LoginVC.swift */; };
+		842D6D171FC72D3F0088091E /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D6D161FC72D3F0088091E /* InsertTextField.swift */; };
+		842D6D191FC7311C0088091E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D6D181FC7311C0088091E /* ShadowView.swift */; };
+		842D6D1B1FC7324C0088091E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D6D1A1FC7324C0088091E /* AuthService.swift */; };
 		845801661F97C52E005323D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 845801651F97C51D005323D0 /* GoogleService-Info.plist */; };
 		845801681F97CE59005323D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845801671F97CE59005323D0 /* DataService.swift */; };
 		8466BB4E1F96877E0053D1E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8466BB4D1F96877E0053D1E8 /* AppDelegate.swift */; };
@@ -21,6 +26,11 @@
 /* Begin PBXFileReference section */
 		2A395746EC8B3317A98BB1E5 /* Pods-social-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-social-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-social-app/Pods-social-app.debug.xcconfig"; sourceTree = "<group>"; };
 		356030220C7DE51F4AD099DA /* Pods-social-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-social-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-social-app/Pods-social-app.release.xcconfig"; sourceTree = "<group>"; };
+		842D6D121FC72C550088091E /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		842D6D141FC72CF30088091E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		842D6D161FC72D3F0088091E /* InsertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextField.swift; sourceTree = "<group>"; };
+		842D6D181FC7311C0088091E /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		842D6D1A1FC7324C0088091E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		845801651F97C51D005323D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		845801671F97CE59005323D0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		8466BB4A1F96877D0053D1E8 /* social-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +78,8 @@
 			children = (
 				8466BB4F1F96877E0053D1E8 /* FirstViewController.swift */,
 				8466BB511F96877E0053D1E8 /* SecondViewController.swift */,
+				842D6D141FC72CF30088091E /* LoginVC.swift */,
+				842D6D121FC72C550088091E /* AuthVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -75,6 +87,8 @@
 		840163421F9689230009C4BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				842D6D161FC72D3F0088091E /* InsertTextField.swift */,
+				842D6D181FC7311C0088091E /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				845801671F97CE59005323D0 /* DataService.swift */,
+				842D6D1A1FC7324C0088091E /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,7 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D6D171FC72D3F0088091E /* InsertTextField.swift in Sources */,
+				842D6D131FC72C550088091E /* AuthVC.swift in Sources */,
 				8466BB521F96877E0053D1E8 /* SecondViewController.swift in Sources */,
+				842D6D1B1FC7324C0088091E /* AuthService.swift in Sources */,
+				842D6D151FC72CF30088091E /* LoginVC.swift in Sources */,
+				842D6D191FC7311C0088091E /* ShadowView.swift in Sources */,
 				8466BB4E1F96877E0053D1E8 /* AppDelegate.swift in Sources */,
 				8466BB501F96877E0053D1E8 /* FirstViewController.swift in Sources */,
 				845801681F97CE59005323D0 /* DataService.swift in Sources */,

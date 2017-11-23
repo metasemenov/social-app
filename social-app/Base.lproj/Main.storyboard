@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,24 +88,27 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="5VA-Oj-lGU">
             <objects>
-                <viewController id="czV-zZ-dM8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="czV-zZ-dM8" customClass="LoginVC" customModule="social_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AZ7-3p-2n1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o19-5T-205">
-                                <rect key="frame" x="16" y="20" width="21" height="22"/>
+                                <rect key="frame" x="16" y="40" width="21" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6Yy-tm-APW"/>
                                     <constraint firstAttribute="width" constant="21" id="PAL-P5-rsh"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnWasPressed:" destination="czV-zZ-dM8" eventType="touchUpInside" id="Y0D-Dh-eQG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJw-hn-sSM">
-                                <rect key="frame" x="147.5" y="243" width="80" height="33"/>
+                                <rect key="frame" x="147.5" y="263" width="80" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="mKB-Tk-p7e"/>
                                 </constraints>
@@ -113,9 +116,12 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInBtnWasPressed:" destination="czV-zZ-dM8" eventType="touchUpInside" id="nMx-KG-w3E"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-AW-Ez2">
-                                <rect key="frame" x="36" y="62" width="303" height="161"/>
+                                <rect key="frame" x="36" y="82" width="303" height="161"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73m-L5-lgJ">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="21"/>
@@ -123,7 +129,7 @@
                                         <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTZ-6b-uXh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTZ-6b-uXh" customClass="InsertTextField" customModule="social_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="41" width="303" height="50"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.15686274510000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -133,7 +139,7 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFo-wm-Auy">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFo-wm-Auy" customClass="InsertTextField" customModule="social_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="111" width="303" height="50"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.15686274510000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -150,7 +156,7 @@
                         <constraints>
                             <constraint firstItem="kLO-AW-Ez2" firstAttribute="top" secondItem="o19-5T-205" secondAttribute="bottom" constant="20" id="6UN-XY-RCw"/>
                             <constraint firstItem="CJw-hn-sSM" firstAttribute="top" secondItem="kLO-AW-Ez2" secondAttribute="bottom" constant="20" id="JQu-Ou-siS"/>
-                            <constraint firstItem="o19-5T-205" firstAttribute="top" secondItem="zZQ-SW-pY9" secondAttribute="top" id="O7b-up-PoD"/>
+                            <constraint firstItem="o19-5T-205" firstAttribute="top" secondItem="zZQ-SW-pY9" secondAttribute="top" constant="20" id="O7b-up-PoD"/>
                             <constraint firstItem="kLO-AW-Ez2" firstAttribute="leading" secondItem="zZQ-SW-pY9" secondAttribute="leading" constant="36" id="TqN-hs-ipg"/>
                             <constraint firstItem="o19-5T-205" firstAttribute="leading" secondItem="zZQ-SW-pY9" secondAttribute="leading" constant="16" id="dWE-yN-1xd"/>
                             <constraint firstItem="zZQ-SW-pY9" firstAttribute="trailing" secondItem="kLO-AW-Ez2" secondAttribute="trailing" constant="36" id="mui-cs-Rhe"/>
@@ -158,15 +164,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zZQ-SW-pY9"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="iTZ-6b-uXh" id="FDg-bw-D9f"/>
+                        <outlet property="passwordField" destination="dFo-wm-Auy" id="UvB-Kw-hBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nZ-If-i7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1991.2" y="943.17841079460277"/>
+            <point key="canvasLocation" x="-2220" y="949"/>
         </scene>
-        <!--View Controller-->
+        <!--AuthVC-->
         <scene sceneID="xTo-PA-x5f">
             <objects>
-                <viewController id="hZc-PW-UcB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" id="hZc-PW-UcB" customClass="AuthVC" customModule="social_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7i-W0-5Pe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +193,7 @@
                                 <color key="textColor" red="0.5607843137254902" green="0.81176470588235294" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCI-YA-naL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCI-YA-naL" customClass="ShadowView" customModule="social_app" customModuleProvider="target">
                                 <rect key="frame" x="16" y="137.5" width="343" height="392"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="to9-rg-sXh">
@@ -201,6 +211,9 @@
                                                 <state key="normal" title="LOGIN WITH FB">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="facebookSignInBtnWasPressed:" destination="hZc-PW-UcB" eventType="touchUpInside" id="Vx3-At-TxN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc3-M0-28B">
                                                 <rect key="frame" x="0.0" y="161" width="303" height="70.5"/>
@@ -208,6 +221,9 @@
                                                 <state key="normal" title="LOGIN WITH G+">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="googleSignInBtnWasPressed:" destination="hZc-PW-UcB" eventType="touchUpInside" id="T2G-MP-UtW"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKt-zG-E7w">
                                                 <rect key="frame" x="0.0" y="241.5" width="303" height="70.5"/>
@@ -226,6 +242,9 @@
                                         <state key="normal" title=" by email" image="emailIcon">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInWithEmailWasPressed:" destination="hZc-PW-UcB" eventType="touchUpInside" id="Hun-D5-BaG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.27058823529411763" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
